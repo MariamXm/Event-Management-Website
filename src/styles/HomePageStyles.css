@@ -1,0 +1,334 @@
+/* Hero banner section */
+.hero-banner-section-main{
+    background-image: url('https://img.freepik.com/free-vector/black-background-with-wavy-lines-copy-space_474888-5349.jpg?semt=ais_hybrid&w=740&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 100px;
+    color: white;
+    text-align: center;
+}
+.hero-banner-section{
+    margin: 70px 305px;
+}
+.hero-banner-section h1{
+    font-size: 96px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    /* letter-spacing: 2px; */
+    line-height: 93px;
+}
+.hero-banner-section p{
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 34px;
+    margin-bottom: 0;
+    font-family: sans-serif;
+}
+.hero-banner-button button{
+    background-color: #cb00e3;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 40px;
+    padding: 20px 40px;
+    margin-top: 40px;
+}
+.hero-banner-button button:hover{
+    background-color: white;
+    color: #cb00e3;
+}
+
+/* Slide section */
+.home-page-slide-section{
+    background: linear-gradient(180deg,white 0%, rgb(206, 205, 205) 100%);
+    padding: 75px 100px;
+}
+.slide-section-heading{
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center; 
+}
+.slide-section-slide{
+    display: flex;
+    margin-top: 88px;
+}
+.slide-img-container{
+    width: 500px;
+    height: 108px;
+    margin: 0 15px;
+}
+.slide-img-container img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/* How to Buy Tickets section */
+.buy-tickets-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(25deg, #cb00e3, black, black, black);
+  padding: 75px 100px;
+  color: white;
+}
+.buy-ticket-section-content{
+  max-width: 500px;
+}
+.buy-tickets-section h2 {
+  font-size: 36px;
+  margin: 10px 0 30px;
+  font-weight: 700;
+}
+.steps-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+.step .icon {
+  background:#cb00e3;
+  color: white;
+  font-size: 20px;
+  padding: 12px;
+  border-radius: 12px;
+}
+.step h4{
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.step p {
+  color: #aaa;
+  font-size: 14px;
+}
+.buy-section-img-container{
+  border-radius: 12px;
+  width: 600px;
+}
+.buy-section-img-container img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    border-radius: 30px;
+}
+/* Events section */
+.home-page-events-section{
+    padding: 75px 100px;
+    background-color: white;
+}
+.event-heading{
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    margin-bottom: 40px;
+}
+.event-card .card-img-top {
+  object-fit: cover;
+  height: 260px;
+  border-radius:15px;
+}
+.event-card .card{
+    margin-bottom: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.event-card .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 11px 15px 22px -10px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 11px 15px 22px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 11px 15px 22px -10px rgba(0,0,0,0.75);
+}
+.event-card .home-page-events-page-link{
+    color: black;
+    text-decoration: none;
+}
+.event-card .card-body{
+    padding: 20px 0;
+}
+.event-card .card-title{
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+.event-card .event-card-text{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.event-card .event-card-text .fa-calendar-alt{
+    margin-right: 10px;
+}
+.event-card .event-card-text .fa-map-marker-alt{
+    margin-right: 15px;
+}
+.event-card .view-more-events-button{
+    text-align: center;
+    border: none;
+    border-radius: 40px;
+    background-color: black;
+    padding: 20px 30px;
+    margin-top: 25px;
+    color: white;
+}
+.event-card .view-more-button{
+    text-align: center;
+}
+.event-card .view-more-events-button .router-link-view-more{
+    color: white;
+    text-decoration: none;
+}
+.event-card .view-more-events-button:hover{
+    background-color: #cb00e3;
+    color: white;
+}
+/* Contact Us */
+.home-page-contact-us{
+    background-color:#cb00e3;
+    padding: 50px 100px;
+    text-align: center;
+}
+.contact-us-heading{
+    font-size: 48px;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.contact-us-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.contact-us-form input[type="text"],
+.contact-us-form input[type="tel"], 
+.contact-us-form input[type="email"]{
+    border: none;
+    border-radius: 40px;
+    padding: 10px 20px;
+    width: 100%;
+}
+.contact-us-form input[type="text"]:focus,
+.contact-us-form input[type="tel"]:focus, 
+.contact-us-form input[type="email"]:focus{
+    outline: none;
+}
+.contact-us-name{
+  display: flex;
+  gap: 10px;      
+}
+.contact-us-submit-button button{
+    margin-top: 10px;
+    background-color: black;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: white;
+    padding: 20px 50px;
+    border: none;
+    border-radius: 40px;
+}
+.contact-us-submit-button button:hover{
+    color: #cb00e3;
+
+}
+.names{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.contact-us-error{
+    color: rgb(95, 25, 25);
+    margin: 0;
+    font-size: 12px;
+    text-align: start;
+    margin-left: 10px;
+}
+.contact-us-after-submit{
+    font-size: 24px;
+    font-weight: 700;
+    color: White;
+    margin: 10px 0;
+}
+/* Upcoming event section */
+.home-page-upcoming-events-section{
+    padding: 75px 100px;
+    background-color: black;
+}
+.upcoming-event-heading{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    margin-bottom: 40px;
+}
+.upcoming-event-card .card-img-top {
+  object-fit: cover;
+  height: 260px;
+  border-radius:15px;
+}
+.upcoming-event-card .card{
+    margin-bottom: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(153, 153, 153, 0.21);
+ 
+    /* border: 1px solid grey; */
+    background-color:rgba(153, 153, 153, 0.21);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.upcoming-event-card .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 11px 15px 22px -10px rgba(255,255,255,0.75);
+    -webkit-box-shadow: 11px 15px 22px -10px rgba(255,255,255,0.75);
+    -moz-box-shadow: 11px 15px 22px -10px rgba(255,255,255,0.75);
+    
+}
+.upcoming-event-card .card-body{
+    padding: 20px 0;
+    color: white;
+}
+.upcoming-event-card .card-title{
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+.upcoming-event-card .event-card-text{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.upcoming-event-card .event-card-text .fa-calendar-alt{
+    margin-right: 10px;
+}
+.upcoming-event-card .event-card-text .fa-map-marker-alt{
+    margin-right: 15px;
+}
+.upcoming-event-card .view-more-events-button{
+    text-align: center;
+    border: none;
+    border-radius: 40px;
+    background-color:#cb00e3;
+    padding: 20px 30px;
+    margin-top: 40px;
+    font-weight:bolder;
+}
+.upcoming-event-card .view-more-button{
+    text-align: center;
+}
+.upcoming-event-card .view-more-events-button .router-link-view-more{
+    color: white;
+    text-decoration: none;
+}
+.upcoming-event-card .view-more-events-button:hover{
+    background-color: white;
+    color: #cb00e3;
+}
+.upcoming-event-card .router-link-envents-detail-page{
+    text-decoration:none;
+}

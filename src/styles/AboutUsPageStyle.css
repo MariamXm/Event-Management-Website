@@ -1,0 +1,84 @@
+/* Banner section */
+.about-us-page-banner-section{
+    background-image: url('https://img.freepik.com/premium-photo/glowing-purple-black-grainy-gradient-background-abstract-dark-banner-header-poster-design-noise-texture-effect-copy-space_284753-2604.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 130px 100px;
+    color: white;
+}
+.about-us-page-container{
+    margin: 0 70px;
+}
+.banner-heading{
+    font-size: 86px;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.banner-text{
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 120px;
+}
+.banner-get-started-button{
+    background-color:#cb00e3;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    margin-top: 40px;
+}
+.banner-get-started-button:hover{
+   opacity: 0.8;
+}
+/* why choose us section */
+.why-choose-us-section{
+   padding: 75px 100px;
+   background: white;
+   text-align: center;
+}
+.why-choose-us-section h2{
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: black;
+}
+.features{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.feature-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  min-width: 260px;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+.feature-card .icon {
+  font-size: 40px;
+  color: #cb00e3;
+  margin-bottom: 20px;
+}
+.feature-card h3{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: black;
+}
+.feature-card p{
+  font-size: 16px;
+  color: grey;
+  line-height: 1.6;
+}

@@ -1,0 +1,156 @@
+.event-detail-page-detail-section{
+   padding: 75px 100px;
+   background-color: black;
+}
+.detail-page-event-image{
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.3);
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 0 auto;
+    height: 600px;
+    max-width: 1070px;
+}
+.detail-page-event-image img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.detail-page-detail-section{
+    background-color: rgba(128, 128, 128, 0.3);
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1070px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    color: #cb00e3;   
+}
+.detail-page-event-title{
+    background-color: black;
+    border: none;
+    border-radius: 35px;
+    padding: 8px;
+    text-align: center;
+}
+.detail-page-event-title h1{
+    font-weight: 900;
+}
+.detail-page-event-date, .detail-page-event-location{
+    width: 50%;
+    background-color: black;
+    border: none;
+    border-radius: 35px;
+    margin-top: 10px;
+    padding: 8px;
+    text-align: center;
+}
+.detail-page-event-date p, .detail-page-event-location p{
+    margin-bottom: 0;
+    margin-left: 12px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* button section */
+.detail-page-button-section{
+    display: flex;
+    gap: 20px;
+    background-color: rgba(128, 128, 128, 0.3);
+    margin-top: 30px;
+    border: none;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1070px;
+    padding: 10px;
+}
+.detail-page-button-section .detail-button{
+    width: 50%;
+}
+.detail-page-button-section .detail-button button{
+    background-color: black;
+    border: none;
+    border-radius: 35px;
+    color: #cb00e3;
+    padding: 5px 10px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+}
+.detail-page-button-section .detail-button button:hover,
+.detail-page-button-section .detail-button button:focus{
+    background-color: #cb00e3;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+}
+/* buttons reaction section */
+.detail-page-button-reaction-section{
+    background-color: rgba(128, 128, 128, 0.3);
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1070px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    color: white; 
+}
+.detail-page-event-description{
+    /* width: 50%; */
+    background-color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 20px;
+}
+.detail-page-event-description h4{
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: start;
+    margin-left: 14px;
+}
+.detail-page-event-description p{
+   margin-bottom: 0;
+   padding-bottom: 10px;
+   margin: 0 16px;
+   font-size: 14px;
+}
+.detail-page-event-tickets{
+   background-color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+}
+.detail-page-event-tickets p{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0;
+    width: 220px;
+    margin-left: 13px;
+    padding: 10px;
+}
+.ticket-flex-container{
+    display: flex;
+    justify-content: space-evenly;
+    border: none;
+    margin-bottom: 10px;
+}
+.ticket-buy-button{
+    padding: 8px 25px;
+    background-color: #cb00e3;
+    color:white;
+    border: none;
+    border-radius: 15px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+.ticket-buy-button:hover{
+    background-color: white;
+    color: black;
+}

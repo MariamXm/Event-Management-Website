@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HeaderComponent></HeaderComponent>
+      <router-view></router-view>
+      <FooterComponent></FooterComponent>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HeaderComponent from './components/HeaderComponent.vue'
+import FooterComponent from './components/FooterComponent.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+        HeaderComponent,
+        FooterComponent,
+    },
 }
 </script>
 
 <style>
+@font-face{
+  font-family: "Red Hat Display";
+  src: url('C:\Users\PMLS\Desktop\Internship\Event-Management-Website\event-management-website\src\assets\RedHatDisplay-VariableFont_wght.ttf');
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Red Hat Display";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
