@@ -15,12 +15,10 @@
       <!-- Ticket Types section -->
       <div v-for="(ticket, index) in tickets" :key="index" class="ticket-type">
         <h3>Ticket {{ index + 1 }}</h3>
-
         <div class="form-group">
           <label>Type</label>
           <input type="text" v-model="ticket.type" placeholder="VIP, Standard"/>
         </div>
-
         <div class="form-group">
           <label>Price </label>
           <input type="number" v-model.number="ticket.price"/>
@@ -44,7 +42,7 @@ export default {
   data() {
     return {
       selectedEvent: "", 
-        tickets: [{ type: "", price: 0 }],
+      tickets: [{ type: "", price: 0 }],
     };
   },
   computed: {
@@ -75,13 +73,14 @@ export default {
 <style scoped>
 .ticket-add-form {
   max-width: 600px;
-  margin: 75px auto;
-  padding: 20px;
+  margin: 50px auto;
+  padding: 25px;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 12px 18px 14px 0px rgba(132,39,116,0.75);
--webkit-box-shadow: 12px 18px 14px 0px rgba(132,39,116,0.75);
--moz-box-shadow: 12px 18px 14px 0px rgba(132,39,116,0.75);
+  border: 1px dashed #cb00e3;
+  /* box-shadow: 12px 18px 14px 0px rgba(132,39,116,0.75);
+  -webkit-box-shadow: 12px 18px 14px 0px rgba(132,39,116,0.75);
+  -moz-box-shadow: 12px 18px 14px 0px rgba(132,39,116,0.75); */
 }
 
 .ticket-add-form h1{

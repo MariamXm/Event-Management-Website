@@ -27,11 +27,12 @@
             <div class="header-profile-image">
               <img :src="profileImage||defaultImage" alt="profile-image"/>
             </div>
-
-            <ul v-if="showDropdown" class="dropdown-menu">
-              <li><router-link :to="dashboardLink()" class="menu-router-links">Dashboard</router-link></li>
-              <li><a href="#" class="menu-router-links" @click.prevent="logout">Log Out</a></li>
-            </ul>
+            <div class="dropdown-menu-flex-container">
+              <ul v-if="showDropdown" class="dropdown-menu">
+                <li><router-link :to="dashboardLink()" class="menu-router-links">Dashboard</router-link></li>
+                <li><a href="#" class="menu-router-links" @click.prevent="logout">Log Out</a></li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
@@ -94,83 +95,87 @@ export default {
 
 <style scoped>
 .header-component-main-container{
-    background-color: black;
-    padding: 20px;
+  background-color: black;
+  padding: 20px;
 }
 .header-component{
-    margin: 0 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .logo-container{
-    width: 190px;
-    max-height: 40px;
+  width: 190px;
+  max-height: 40px;
 }
 .logo-container img{
-    width:100%;
-    object-fit: cover;
-    object-position: center;
+  width:100%;
+  object-fit: cover;
+  object-position: center;
 }
 .header-menu-container ul{
-    display: flex;
-    gap: 40px;
-    font-size: 16px;
-    margin-right: 20px;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0;
+  display: flex;
+  gap: 40px;
+  font-size: 16px;
+  margin-right: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
 }
 li{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    letter-spacing: 1px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 1px;
 }
 .menu-router-links{
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 .menu-router-links:hover{
-    color:#cb00e3;
+  color:#cb00e3;
 }
 .header-profile-image{
-    max-height: 50px;
-    max-width: 50px;
+  max-height: 50px;
+  max-width: 50px;
 }
 .header-profile-image img{
-    width: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
 }
 .login-button{
-    background-color: #cb00e3;
-    border: none;
-    border-radius: 20px;
-    padding:8px 20px;
-    color: white;
-    letter-spacing: 1px;
+  background-color: #cb00e3;
+  border: none;
+  border-radius: 20px;
+  padding:8px 20px;
+  color: white;
+  letter-spacing: 1px;
 }
 .login-button:hover{
-    opacity: 0.9;
+  opacity: 0.9;
 }
 .profile-menu{
-    position: relative;
+  position: relative;
 }
 .dropdown-menu{
-    background-image: url('https://ticketleap2023.wpenginepowered.com/wp-content/uploads/2023/12/bg-2.webp');
-    position: absolute;
-    top: 50px;
-    left: -70px;
-    padding: 10px 40px;
-    list-style: none;
-    margin: 0;
-    border-radius: 5px;
-    flex-direction: column;
+  background: linear-gradient(25deg, #cb00e3, black, black, #cb00e3);
+  position: absolute;
+  top: 50px;
+  left: -70px;
+  padding: 12px 30px;
+  list-style: none;
+  margin: 0;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.active-link{
-    color:#cb00e3;
+
+.active-link:active{
+  color:#cb00e3;
 }
 </style>
 

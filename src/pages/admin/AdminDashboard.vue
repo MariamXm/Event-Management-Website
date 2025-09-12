@@ -1,68 +1,102 @@
 <template>
-  <div class="admin-dashboard-main-container">
-    <h1>Admin Dashboard</h1>
+  <div class="admin-dashboard">
+    <div class="dashboard-header">
+      <h1>Dashboard Overview</h1>
+      <p>Welcome back, Admin!</p>
+    </div>
 
-    <ul class="dashboard-links">
-      <li>
-        <router-link to="/admin/event-editing" class="dashboard-link">Events Page</router-link>
-      </li>
-      <li>
-        <router-link to="/admin/ticket-editing" class="dashboard-link">Tickets Page</router-link>
-      </li>
-    </ul>
+    <div class="dashboard-cards">
+      <div class="card">
+        <i class="fas fa-calendar-alt"></i>
+        <h3>Manage Events</h3>
+        <p>Edit, update, or add events.</p>
+        <router-link to="/admin/event-editing" class="card-btn">Go to Events</router-link>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-ticket-alt"></i>
+        <h3>Manage Tickets</h3>
+        <p>Update ticket details and pricing.</p>
+        <router-link to="/admin/ticket-editing" class="card-btn">Go to Tickets</router-link>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.admin-dashboard-main-container{
-  max-width: 600px;
-  margin: 60px auto;
-  padding: 30px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 1px 15px 45px 7px rgba(132,39,116,0.75);
--webkit-box-shadow: 1px 15px 45px 7px rgba(132,39,116,0.75);
--moz-box-shadow: 1px 15px 45px 7px rgba(132,39,116,0.75);
-  text-align: center;
-}
-
-.admin-dashboard-main-container h1{
-  margin-bottom: 30px;
-  font-size: 40px;
-  color: #cb00e3;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.dashboard-links{
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.dashboard-links li{
-  display: flex;
-  justify-content: center;
-}
-
-.dashboard-link {
-  display: block;
-  width: 100%;
-  max-width: 250px;
-  padding: 12px 20px;
+.admin-dashboard {
+  flex: 1;
   background: white;
-  border: 2px solid #cb00e3;
-  border-radius: 8px;
-  font-weight: bold;
-  color: #cb00e3;
-  text-decoration: none;
-  text-align: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-.dashboard-link:hover {
-  background: #cb00e3;
-  color: white;
+.dashboard-header {
+  margin-bottom: 40px;
+}
+.dashboard-header h1{
+  font-size: 32px;
+  color: black;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.dashboard-header p{
+  color: grey;
+  font-size: 18px;
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 50px;
+}
+
+.card {
+  flex: 1;
+  background: white;
+  width: 400px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  padding: 25px 20px;
+  text-align: center;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card i {
+  font-size: 50px;       
+  margin-bottom: 15px;
+  display: block;
+  color: black;      
+}
+.card:hover {
+  border-color: #cb00e3;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #222;
+  font-weight: 600;
+}
+
+.card p {
+  color: #666;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.card-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: black;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.card-btn:hover {
+  background-color: #a300b8;
 }
 </style>

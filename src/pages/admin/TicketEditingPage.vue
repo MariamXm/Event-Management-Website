@@ -59,8 +59,8 @@ export default {
 
 <style scoped>
 .ticket-editing-page {
-    padding: 50px 80px;
-    min-height: 100vh;
+  padding: 50px 80px;
+  min-height: 100vh;
 }
 .ticket-editing-page h1{
   font-size: 32px;
@@ -72,15 +72,15 @@ export default {
 }
 
 .ticket-editing-page table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    -webkit-box-shadow:  0 4px 12px rgba(0,0,0,0.08);
-    -moz-box-shadow:   0 4px 12px rgba(0,0,0,0.08);
-    margin-bottom: 40px;
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  -webkit-box-shadow:  0 4px 12px rgba(0,0,0,0.08);
+  -moz-box-shadow:   0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 40px;
 }
 
 .ticket-editing-page th{
@@ -104,21 +104,21 @@ export default {
   display: table-row-group;
 }
 .ticket-edit-button{
-    border: 2px dashed #cb00e3;
-    border-radius: 10px;
-    padding: 15px;
-    width: 100%;
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
+  border: 2px dashed #cb00e3;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
     
 }
 .ticket-edit-button:hover{
-    background-color: #cb00e3;
-    color: white;
+  background-color: #cb00e3;
+  color: white;
 }
 .add-ticket-button{
-      background-color: white;
+  background-color: white;
   color: #cb00e3;
   padding: 20px;
   border: 2px dotted #cb00e3;

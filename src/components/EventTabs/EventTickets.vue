@@ -1,16 +1,16 @@
 <template>
     <div>
-         <div class="detail-page-button-reaction-section">
-                <div class="detail-page-event-tickets">
-                    <div v-for="ticket in getTicketsByEventId(event.id)" :key="ticket.id" class="ticket-flex-container">
-                        <p>{{ ticket.type }}</p>
-                        <p>Rs. {{ ticket.price }}</p>
-                        <button class="ticket-buy-button" @click="buyTicket(ticket)" :disabled="!isUpcoming">
-                            {{ isUpcoming ? "Buy now" : "Event Passed" }}
-                        </button>
-                    </div>
-                </div>
+      <div class="detail-page-button-reaction-section">
+          <div class="detail-page-event-tickets">
+            <div v-for="ticket in getTicketsByEventId(event.id)" :key="ticket.id" class="ticket-flex-container">
+              <p>{{ ticket.type }}</p>
+              <p>Rs. {{ ticket.price }}</p>
+              <button class="ticket-buy-button" @click="buyTicket(ticket)" :disabled="!isUpcoming">
+                  {{ isUpcoming ? "Buy now" : "Event Passed" }}
+              </button>
             </div>
+          </div>
+      </div>
     </div>
 </template>
 
@@ -52,6 +52,7 @@ export default {
 
       purchasedTickets.push(ticketBought)
       localStorage.setItem("purchased_tickets", JSON.stringify(purchasedTickets))
+      // this alert needs to be replaced with a toast
       alert("Ticket successfully purchased!")
     }
   }

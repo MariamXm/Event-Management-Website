@@ -47,12 +47,10 @@ import {mapGetters} from 'vuex'
 
 export default{
     data() {
-        return{
-
-        };
+      return{
+      };
     },
     methods: {
-
     },
     computed: {
       ...mapGetters(['getEvents']),

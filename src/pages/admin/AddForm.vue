@@ -109,18 +109,17 @@ export default {
 
 <style scoped>
 .add-form-main-container {
-  padding: 50px 100px;
   min-height: 100vh;
 }
 
 .event-form-container {
-  max-width: 750px;
+  max-width: 650px;
   margin: 40px auto;
   padding: 30px 40px;
   border-radius: 16px;
   background: #fff;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15); 
-  border: 2px solid #cb00e3;
+  border: 2px dotted #cb00e3;
 }
 
 .form-title {
@@ -133,14 +132,14 @@ export default {
 }
 
 .event-form label{
-  margin-top: 18px;
+  margin-top: 10px;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 0;
   margin-left: 5px;
 }
 .add-form-details{
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .event-form input,
 .event-form textarea {
@@ -170,7 +169,10 @@ export default {
   width: 100%;
   text-align: center;
 }
-
+.event-poster-add-form label:hover{
+  color: white;
+  background-color: #cb00e3;
+}
 .event-form textarea{
   min-height: 120px;
   resize: none;
@@ -192,8 +194,8 @@ export default {
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 1px;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .form-button:hover {
@@ -211,5 +213,4 @@ export default {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-
 </style>

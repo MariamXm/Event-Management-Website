@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <HeaderComponent></HeaderComponent>
+    <KeepAlive>
       <router-view></router-view>
-      <FooterComponent></FooterComponent>
+    </KeepAlive>
+    <FooterComponent></FooterComponent>
   </div>
 </template>
 

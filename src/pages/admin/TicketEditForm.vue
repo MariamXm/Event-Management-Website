@@ -68,7 +68,6 @@ export default {
       }));
 
       this.form.event = this.$route.params.title || "";
-
     },
   },
   created() {
@@ -81,14 +80,14 @@ export default {
 <style scoped>
 .ticket-edit-form {
   max-width: 600px;
-  margin: 60px auto;
+  margin: 50px auto;
   padding: 40px;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 10px 10px 14px 0px rgba(132,39,116,0.75);
+  /* box-shadow: 10px 10px 14px 0px rgba(132,39,116,0.75);
   -webkit-box-shadow: 10px 10px 14px 0px rgba(132,39,116,0.75);
-  -moz-box-shadow: 10px 10px 14px 0px rgba(132,39,116,0.75);
-  border: 1px solid #cb00e3;
+  -moz-box-shadow: 10px 10px 14px 0px rgba(132,39,116,0.75); */
+  border: 1px dashed #cb00e3;
 }
 
 .ticket-edit-form h1 {
@@ -97,6 +96,7 @@ export default {
   font-size: 28px;
   font-weight: 800;
   margin-bottom: 30px;
+  letter-spacing: 1px;
 }
 
 .form-group {
@@ -105,11 +105,11 @@ export default {
   flex-direction: column;
 }
 
-.form-group label {
+.form-group label{
   margin-bottom: 8px;
   font-weight: 600;
-  font-size: 15px;
-  color: #333;
+  font-size: 16px;
+  color: black;
 }
 
 .form-group input {

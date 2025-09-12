@@ -65,28 +65,28 @@
   padding-bottom: 10px;
 }
 .footer-component {
-    margin: 0 40px;
+  margin: 0 40px;
 }
 .footer-logo-container{
-    margin: 0 auto;
-    text-align: center;
-    max-width: 300px;
-    margin-bottom: 40px;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 300px;
+  margin-bottom: 40px;
 }
 .footer-logo-container img{
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }
 .footer-component h4{
-   letter-spacing: 2px;
-   margin-bottom: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
 }
 .footer-links-contact{
-    display: flex;
-    justify-content: space-evenly;
-    gap: 40px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 .footer-links ul{
   list-style: none;
@@ -98,41 +98,41 @@
   letter-spacing: 1px;
 }
 .route-links{
-    color: white;
-    font-size: 16px;
-    font-weight: 200;
+  color: white;
+  font-size: 16px;
+  font-weight: 200;
 }
 .route-links:hover{
   color:#cb00e3;
   text-decoration: none;
 }
 .footer-contact div{
-   letter-spacing: 1.5px;
-   font-size: 16px;
-   font-weight: 500;
+  letter-spacing: 1.5px;
+  font-size: 16px;
+  font-weight: 500;
 }
 .footer-contact p{
-    font-weight: 200;
-    font-size: 14px;
+  font-weight: 200;
+  font-size: 14px;
 }
 
 .footer-social-icons{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer-social-icons a{
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    margin: 0 5px;
-    border: 1px solid white;
-    padding: 5px 12px;
-    border-radius: 50%;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin: 0 5px;
+  border: 1px solid white;
+  padding: 5px 12px;
+  border-radius: 50%;
 }
 .footer-social-icons a:hover{
-    color:#cb00e3;
+  color:#cb00e3;
 }
 .footer-bottom {
   text-align: center;
@@ -143,6 +143,6 @@
   padding-top: 10px;
 }
 .footer-bottom p{
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 </style>

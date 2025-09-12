@@ -136,15 +136,15 @@ export default {
 
 <style scoped>
 .settings-page-main-container {
-  padding: 75px 100px;
-  background-color: rgba(239,228,228,0.75);
+  padding: 50px 100px;
+  background: linear-gradient(135deg, #cb00e3, black, black, #cb00e3, black, black);
   color: white;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 .settings-page-container{
-    border-radius: 30px;
-    padding: 40px;
-    background-color: black;
+  border-radius: 30px;
+  padding: 40px;
+  background-color: black;
 }
 .settings-profile-header {
   display: flex;
@@ -176,16 +176,16 @@ export default {
   margin: 5px 0 0 0;
 }
 .user-image-edit-button{
-    padding: 15px 25px;
-    margin: 20px 0;
-    background-color: #cb00e3;
-    color: white;
-    border: none;
-    border-radius: 30px;
+  padding: 15px 25px;
+  margin: 20px 0;
+  background-color: #cb00e3;
+  color: white;
+  border: none;
+  border-radius: 30px;
 }
 .user-image-edit-button:hover{
-    background-color: white;
-    color: #cb00e3;
+  background-color: white;
+  color: #cb00e3;
 }
 .user-detail-table {
   margin-top: 40px;
@@ -219,15 +219,15 @@ export default {
   color: white;
 }
 .user-phone-edit-button{
-    color: white;
-    background-color: #cb00e3;
-    border: none;
-    border-radius: 10px;
-    padding: 8px 20px;
+  color: white;
+  background-color: #cb00e3;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 20px;
 }
 .user-phone-edit-button:hover{
-    background-color: white;
-    color: #cb00e3;
+  background-color: white;
+  color: #cb00e3;
 }
 .phone-buttons{
   padding: 10px;
@@ -255,7 +255,7 @@ export default {
   flex-direction: column;
 }
 .edit-image-container input[type="file"]{
-    display: none;
+  display: none;
 }
 .edit-image-container label{
   border: 2px solid white;

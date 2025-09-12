@@ -24,10 +24,8 @@
                     <button @click="activeNav = nav.tabComponent"> {{ nav.name }} </button>
                 </div>
             </div>
-        <component :is="activeNav" :event="event"></component>
-             
+            <component :is="activeNav" :event="event"></component>
         </div>
-
         <!-- Contact us section -->
         <div class="home-page-contact-us" id="contact-us">
             <h3 class="contact-us-heading">Contact Us Today!</h3>
@@ -115,35 +113,9 @@ export default {
             if (this.validateForm()) return
             this.isSubmitted = true;
         },
-        buyTicket(ticket) {
-            const currentUser = JSON.parse(localStorage.getItem("current_user"));
-            if (!currentUser || !currentUser.id) return
-
-            const purchasedTickets = JSON.parse(localStorage.getItem("purchased_tickets")) || [];
-            const ticketBought = {
-                id: purchasedTickets.length + 1,
-                eventId: this.event.id,
-                userId: currentUser.id,
-                ticketType: ticket.type,
-                price: ticket.price,
-                totalPrice: ticket.price,
-                status: "confirmed",
-            };
-
-            purchasedTickets.push(ticketBought);
-            localStorage.setItem("purchased_tickets", JSON.stringify(purchasedTickets));
-            alert("Ticket successfully purchased!");
-        }
     },
     computed: {
         ...mapGetters(['getEvents', 'getTicketsByEventId']),
-        isUpcoming() {
-            if (!this.event || !this.event.date) return false;
-                const eventDate=new Date(this.event.date);
-                const today=new Date();
-                return eventDate >= today;
-        }
-        // google: gmapApi
     },
     mounted() {
         const id = this.$route.params.id
