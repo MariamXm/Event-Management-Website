@@ -9,10 +9,10 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 import * as VueGoogleMaps from 'vue2-google-maps'
 
-
+// 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'AIzaSyB108WtVdkJmjyqxTeOnLu3VMJqHxz0F0E',  // 🔑 replace with your real key
+    key: 'm  ',  // 🔑 replace with your real key
     libraries: 'places',              // necessary for places input
   }
 })
