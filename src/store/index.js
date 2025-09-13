@@ -178,7 +178,7 @@ export default new Vuex.Store({
       { id: 5, name: "Ayesha Noor", email: "ayesha.noor@gmail.com", phone: "03451234567", password: "ayesha000", image: "https://t4.ftcdn.net/jpg/11/66/06/77/360_F_1166067709_2SooAuPWXp20XkGev7oOT7nuK1VThCsN.jpg", role: "user" }
     ],
     currentUser: null,
-    purchased_tickets: [{ id: 1, eventId: 1, userId: 1, ticketType: "VIP",totalPrice: 10000, status: "confirmed" },],
+    purchased_tickets: JSON.parse(localStorage.getItem("purchased_tickets")) || [{ id: 1, eventId: 1, userId: 1, ticketType: "VIP",totalPrice: 10000, status: "confirmed" },],
     current_user: {id:1, name: "", role: "", image:""}
 
   },
@@ -290,6 +290,15 @@ export default new Vuex.Store({
         state.current_user.image = image;
         localStorage.setItem("current_user", JSON.stringify(state.current_user));
       }
+    },
+    // purchased tickets
+    addPurchasedTicket(state, ticket) {
+      state.purchased_tickets.push(ticket);
+      localStorage.setItem("purchased_tickets", JSON.stringify(state.purchased_tickets));
+    },
+    setPurchasedTickets(state, tickets) {
+      state.purchased_tickets = tickets;
+      localStorage.setItem("purchased_tickets", JSON.stringify(tickets));
     }
   },
   actions: {

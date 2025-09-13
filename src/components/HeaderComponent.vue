@@ -25,7 +25,7 @@
           </li>
           <li v-else class="profile-menu" @click="toggleDropdown">
             <div class="header-profile-image">
-              <img :src="profileImage||defaultImage" alt="profile-image"/>
+              <img :src="profileImage " alt="profile-image"/>
             </div>
             <div class="dropdown-menu-flex-container">
               <ul v-if="showDropdown" class="dropdown-menu">
@@ -45,7 +45,6 @@ export default {
   data() {
     return {
       showDropdown: false,
-      currentUser: null,
       defaultImage: 'https://static.vecteezy.com/system/resources/thumbnails/020/765/399/small/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg',
       image: null,
     };
@@ -54,18 +53,23 @@ export default {
     const user = localStorage.getItem("current_user"); 
       if (user) {
         this.currentUser = JSON.parse(user);
+        this.$store.commit("setCurrentUser", JSON.parse(user));
       }
       // console.log(this.currentUser.image)
 
   },
   computed: {
-    isLoggedIn(){
-      return this.currentUser!== null;
+    currentUser() {
+    return this.$store.state.current_user;
     },
-    profileImage(){
-      const image = this.currentUser.image
-      // console.log("user image", this.currentUser.image)
-      return image;
+    isLoggedIn() {
+      return this.currentUser && this.currentUser.id; 
+    },
+    profileImage() {
+      if (this.currentUser) {
+        return this.currentUser.image;
+      }
+      return this.defaultImage; 
     }
   },
   methods: {
@@ -74,7 +78,7 @@ export default {
     },
     logout() {
       localStorage.removeItem("loggedInUser");
-      this.currentUser=null;
+      this.$store.commit("setCurrentUser", null);
       localStorage.removeItem("current_user");
       this.showDropdown= false;
       this.$router.push("/login");
@@ -178,4 +182,3 @@ li{
   color:#cb00e3;
 }
 </style>
-

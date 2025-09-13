@@ -83,6 +83,13 @@ export default{
             }
             return Object.keys(this.error).length === 0;
         },
+        resetForm(){
+            this.name="",
+            this.password=""
+            this.confirmPassword=""
+            this.phone=""
+            this.profileImage=this.defaultImage
+        },
         onSubmit(){
             this.error={}
             if(!this.validateForm()){
@@ -97,6 +104,7 @@ export default{
             this.addUser(newUser);
             console.log(newUser);
             this.$router.push("/login");
+            this.resetForm()
         },
         imageUpload(e) {
             // const image = event.target.files[0];

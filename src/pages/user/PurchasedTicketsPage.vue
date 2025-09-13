@@ -2,8 +2,8 @@
   <div class="purchased-tickets-user-page">
     <h2><i class="fa fa-ticket" style="font-size:28px; margin-right: 15px;"></i>My Purchased Tickets</h2>
 
-    <div v-if="tickets.length>0" class="tickets-container">
-      <div v-for="ticket in tickets" :key="ticket.id" class="ticket-card">
+    <div v-if="userTickets.length>0" class="tickets-container">
+      <div v-for="ticket in userTickets" :key="ticket.id" class="ticket-card">
         <div class="ticket-header">
           <h3>{{ getEventTitle(ticket.eventId) }}</h3>
           <span class="status" :class="ticket.status">{{ ticket.status }}</span>
@@ -38,28 +38,27 @@ export default {
   },
   computed: {
     ...mapGetters(["getEvents"]),
-  },
-  mounted() {
-    const user = localStorage.getItem("current_user");
-    if (user) {
-      this.currentUser = JSON.parse(user);
-      const allTickets =JSON.parse(localStorage.getItem("purchased_tickets")) || [];
-      this.tickets = allTickets.filter((ticket) => ticket.userId === this.currentUser.id);
-    }
+    userTickets() {
+      const user = JSON.parse(localStorage.getItem("current_user"));
+      if (!user) return [];
+      return this.$store.state.purchased_tickets.filter(
+        (ticket) => ticket.userId === user.id
+      );
+    },
   },
   methods: {
     getEventTitle(eventId) {
       const event = this.getEvents.find((event) => event.id == eventId);
-      return event.title;
+      return event?.title || "";
     },
-    getEventDate(eventId){
-      const event=this.getEvents.find((event)=>event.id==eventId);
-      return event.date
+    getEventDate(eventId) {
+      const event = this.getEvents.find((event) => event.id == eventId);
+      return event?.date || "";
     },
-    getEventLocation(eventId){
-      const event=this.getEvents.find((event)=>event.id==eventId);
-      return event.location
-    }
+    getEventLocation(eventId) {
+      const event = this.getEvents.find((event) => event.id == eventId);
+      return event?.location || "";
+    },
   },
 };
 </script>
@@ -78,7 +77,7 @@ export default {
   border-bottom: 2px solid #cb00e3;
   padding-bottom: 10px;
 }
-.tickets-container {
+.tickets-container{
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -86,8 +85,8 @@ export default {
 .ticket-card {
   position: relative;
   min-height: 200px;
+  /* max-width: 900px; */
   border-radius: 12px;
-  overflow: hidden;
   background-color: rgb(10, 10, 10);
   color: white;
 }
@@ -97,7 +96,8 @@ export default {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 360px;
+  width: 350px;
+  border-radius: 12px;
   background-image: url('https://images.unsplash.com/photo-1574624876258-818cc9876c53?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fGV2ZW50JTIwdGlja2V0JTIwYmFja2dydW5kJTIwaW1hZ2V8ZW58MHx8MHx8fDA%3D');
   background-size: cover;
   background-position: center;
@@ -119,12 +119,17 @@ export default {
   font-weight: 900;
   margin: 0;
   letter-spacing: 1px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 360px;
+  display: block;
+  overflow: hidden;
   color: white;
 }
 .status{
   position: absolute;
-  top: 18px;
-  right: 380px; 
+  top: 16px;
+  right: 360px; 
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 12px;
@@ -161,19 +166,9 @@ export default {
   -moz-box-shadow:0 12px 32px rgba(2,6,23,0.7);
 }
 .status.confirmed {
-  background: #2e7d32;
-  color:white;
-  border: none;
-}
-.status.pending {
-  background: #b26a00;
-  color: white;
-  border: none;
-}
-.status.canceled {
-  background: #c62828;
-  color: white;
-  border: none;
+  background: rgba(142, 238, 144, 0.7); 
+  color: white; 
+  border: 2px solid rgba(68, 153, 71, 0.3);
 }
 .no-tickets-container {
   text-align: center;

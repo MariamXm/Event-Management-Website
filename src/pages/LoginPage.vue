@@ -53,6 +53,10 @@ export default{
             }
             return true
         },
+        resetForm(){
+            this.email="",
+            this.password=""
+        },
         onSubmit(){
             this.error = "";
             this.error = "";
@@ -72,6 +76,7 @@ export default{
             else{
                 this.$router.push("/dashboard")
             }
+            this.resetForm();
         }
     },
     computed: {

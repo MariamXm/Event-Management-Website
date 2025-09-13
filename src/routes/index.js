@@ -14,9 +14,8 @@ import TicketAddForm from '../pages/admin/TicketAddForm.vue'
 import TicketEditForm from '../pages/admin/TicketEditForm.vue'
 import PurchasedTicketsPage from '../pages/user/PurchasedTicketsPage.vue'
 import SettingsPage from '../pages/user/SettingsPage.vue'
-
+// component for admin dashboard
 import AdminLayout from '../components/AdminLayout.vue'
-
 
 const routes = [
     {path: '/', component: HomePage, name: "HomePage"},
@@ -42,9 +41,6 @@ const routes = [
             {path:'/ticket/add-form', component: TicketAddForm, name: "TicketAddForm"},
         ],
     },
-
-
-
 ]
 
 export default routes

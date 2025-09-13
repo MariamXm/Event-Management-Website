@@ -36,24 +36,21 @@ export default {
   },
   methods: {
     buyTicket(ticket) {
-      const currentUser = JSON.parse(localStorage.getItem("current_user"))
-      if (!currentUser || !currentUser.id) return
+      const currentUser = JSON.parse(localStorage.getItem("current_user"));
+      if (!currentUser || !currentUser.id) return;
 
-      const purchasedTickets = JSON.parse(localStorage.getItem("purchased_tickets")) || []
-      const ticketBought = {
-        id: purchasedTickets.length + 1,
+      const newTicket = {
+        id: Date.now(),
         eventId: this.event.id,
         userId: currentUser.id,
         ticketType: ticket.type,
         price: ticket.price,
         totalPrice: ticket.price,
         status: "confirmed"
-      }
-
-      purchasedTickets.push(ticketBought)
-      localStorage.setItem("purchased_tickets", JSON.stringify(purchasedTickets))
-      // this alert needs to be replaced with a toast
-      alert("Ticket successfully purchased!")
+      };
+      this.$store.commit("addPurchasedTicket", newTicket);
+      // replace alert with toast later
+      alert("Ticket successfully purchased!");
     }
   }
 }
