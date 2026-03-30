@@ -11,6 +11,8 @@
 <script>
 import HeaderComponent from './components/HeaderComponent.vue'
 import FooterComponent from './components/FooterComponent.vue'
+// import RedHatFont from '@/assets/RedHatDisplay-VariableFont_wght.ttf';
+
 export default {
   name: 'App',
   components: {
@@ -21,12 +23,9 @@ export default {
 </script>
 
 <style>
-@font-face{
-  font-family: "Red Hat Display";
-  src: url('C:\Users\PMLS\Desktop\Internship\Event-Management-Website\event-management-website\src\assets\RedHatDisplay-VariableFont_wght.ttf');
-}
+
 #app {
-  font-family: "Red Hat Display";
+  font-family: "RedHatFont";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
