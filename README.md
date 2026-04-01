@@ -1,24 +1,35 @@
-# event-management-website
+# 🎉 TicketLeap - Event Management Platform
 
-## Project setup
-```
+A web application for creating, discovering, and managing events with seamless booking functionality.
+---
+
+## ✨ Features
+
+- Browse events with search filters
+- User registration and login
+- Book tickets for events
+- View booking history
+- Admin dashboard for event & ticket creation
+
+---
+
+## 🛠️ Tech Stack
+
+- Frontend: Vue.js, CSS
+- Database: localStorage
+- Deployment: Vercel
+
+---
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/MariamXm/Event-Management-Website.git
+cd event-management-website
+
+# Install frontend dependencies
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Run the application
+npm run dev
