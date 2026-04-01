@@ -1,9 +1,9 @@
-# 🎉 TicketLeap - Event Management Platform
+# TicketLeap - Event Management Platform
 
 A web application for creating, discovering, and managing events with seamless booking functionality.
 ---
 
-## ✨ Features
+## Features
 
 - Browse events with search filters
 - User registration and login
@@ -13,7 +13,7 @@ A web application for creating, discovering, and managing events with seamless b
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - Frontend: Vue.js, CSS
 - Database: localStorage
